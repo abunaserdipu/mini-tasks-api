@@ -23,6 +23,11 @@ class User extends Authenticatable
         'password',
     ];
 
+    public function projects()
+    {
+        return $this->hasMany(\App\Models\Project::class);
+    }
+
     /**
      * The attributes that should be hidden for serialization.
      *
